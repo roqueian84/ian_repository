@@ -1,3 +1,5 @@
 import { LightningElement } from 'lwc';
 
-export default class parentComp extends LightningElement {}
+export default class parentComp extends LightningElement {
+    booldet = false;
+}
