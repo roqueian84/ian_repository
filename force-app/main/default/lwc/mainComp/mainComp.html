@@ -1,0 +1,28 @@
+<template>
+    Hello World (Main Comp)
+    <div class="slds-m-around_medium">
+         <lightning-input name='checkbox' type="checkbox" label="Show details" onchange={handleChange} checked></lightning-input>
+         <lightning-input name='firstName' label="First Name" onchange={handleChange}></lightning-input>
+         <lightning-input name='lastName' label="Last Name" onchange={handleChange}></lightning-input>
+         <lightning-button variant="brand" label="Alert List" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+    
+    <template if:true={areDetailsVisible}>
+        <div class="slds-m-vertical_medium">
+            <p class="slds-m-top_medium">Uppercased Full Name: {uppercasedFullName}</p>
+        </div>
+    </template>
+
+    <div>
+        <template for:each={tcontact} for:item="contact">
+            <li key={contact.Id}>
+                {contact.Name}, {contact.Title}
+            </li>
+        </template>
+    </div>
+    
+    <!--
+    <div>
+         <c-parent-comp></c-parent-comp>
+    </div> -->
+</template>
