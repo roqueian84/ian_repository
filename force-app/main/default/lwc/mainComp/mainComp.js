@@ -49,8 +49,8 @@ export default class mainComp extends LightningElement {
     handleClick(){
 
         for(let i = 0; i < this.contacts.length; i++){
-            let v1name = this.contacts[i].Name;
-            alert(v1name);
+            let vname = this.contacts[i].Name;
+            alert(vname);
         }
 
         //const fruits1 = this.fruits;
